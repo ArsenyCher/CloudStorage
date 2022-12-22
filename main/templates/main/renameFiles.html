@@ -1,0 +1,13 @@
+{% extends 'main/baseMyFiles.html' %}
+{% block content %}
+    <div class="add_files_block">
+        <div class="add_files">
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="login_field_text"><p>Имя файла</p></div>
+                <input type="text" name="title">
+                <button type="submit">Upload image</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

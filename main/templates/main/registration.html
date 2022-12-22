@@ -1,0 +1,35 @@
+{% extends 'main/base.html' %}
+{% block content %}
+<div class="registration_panel_block">
+    <div class="container_auth">
+        <div class="container_authorization">
+            <form action="{% url 'register' %}" method="post">
+                {% csrf_token %}
+                <div class="entry_text"><h1>Регистрация</h1></div>
+                <div class="login_field_text"><p>Логин</p></div>
+                <input type="text" name="username" placeholder="Username" class="login_field">
+                    {% if form.errors.username %}
+                        <div class="error_text">Такой логин уже занят</div>
+                    {% endif %}
+                <div class="email_field_text"><p>Email</p></div>
+                <input type="text" name="email" placeholder="Email" class="email_field">
+                    {% if form.errors.email %}
+                        <div class="error_text">Неверный e-mail</div>
+                    {% endif %}
+                <div class="password_field_text"><p>Пароль</p></div>
+                <input type="password" name="password" placeholder="Password" class="password_field">
+                <div class="password_field_text"><p>Повторите пароль</p></div>
+                <input type="password" name="password_confirm" placeholder="Сonfirm password" class="password_field">
+                    {% if form.password_confirm.errors %}
+                        <div class="error_text">Пароли не совпадают</div>
+                    {% endif %}
+                <button class="authorization_button" type="submit">Зарегистрироваться</button>
+                <div class="register_link_text"><p>Есть аккаунта? <a href={% url "login"%}>Войти</a></p></div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+</body>
+</html>

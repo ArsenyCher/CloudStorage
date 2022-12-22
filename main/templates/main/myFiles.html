@@ -1,0 +1,46 @@
+{% extends 'main/baseMyFiles.html' %}
+{% load static %}
+{% block content %}
+    <div class="site_content_block">
+            <div class="list_menu">
+                <div class="list_menu_block">
+                    <div class="menu">
+                        <a href="{% url "myImage"%}">Фото</a>
+                        <a class="active" href="">Документы</a>
+                    </div>
+                </div>
+            </div>
+            <div class="info_menu_block">
+                <div class="container_menu">
+                    <div class="content_menu_block">
+                        <div class="wrapper exmpl"> <img src="{{ file.file.url}}"> </div>
+                        <div class="menu_block_text_container">
+                            <div class="info_menu_block_text"><p>Название</p><p></p></div>
+                        </div>
+                        <button class="add_files_button" onclick="document.location='{% url "addFiles"%}'">+</button>
+                    </div>
+                </div>
+            </div>
+            {% for file in files %}
+                {% if user.username == file.userName%}
+                    <div class="files_menu_block">
+                        <div class="container_menu">
+                            <div class="content_menu_block">
+                                <img src={% static 'standartfileicon.svg ' %}>
+                                <div class="menu_block_text_container">
+                                    <div class="info_menu_block_text"><p>{{ file.title }}</p><p>{{ file.filesize}}</p></div>
+                                </div>
+                                <div class="container_button">
+                                    <a class="action_files_button" href='{{ file.file.url }}' download>⤓</a>
+                                    <form method="post" action="{% url 'deleteFiles' file.id %}">
+                                        {% csrf_token %}
+                                        <button class="action_files_button" type="submit">×</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+    </div>
+{% endblock %}

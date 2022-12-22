@@ -1,0 +1,26 @@
+{% extends 'main/base.html' %}
+{% block content %}
+<div class="login_panel_block">
+    <div class="container_auth">
+        <div class="container_authorization">
+            <form action="{% url 'login' %}" method="post">
+                {% csrf_token %}
+                <div class="entry_text"><h1>Вход</h1></div>
+                <div class="login_field_text"><p>Логин</p></div>
+                <input type="text" name="username" placeholder="Username" class="login_field">
+                <div class="password_field_text"><p>Пароль</p></div>
+                <input type="password" name="password" placeholder="Password" class="password_field">
+                <div class="error_text">
+                    {% if form.non_field_errors %}
+                                {% for error in form.non_field_errors %}
+                                  {{ error }}
+                                {% endfor %}
+                    {% endif %}
+                </div>
+                <button class="authorization_button" type="submit">Войти</button>
+                <div class="register_link_text"><p>Нет аккаунта? <a href="/register">Регистрация</a></p></div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

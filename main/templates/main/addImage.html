@@ -1,0 +1,20 @@
+{% extends 'main/baseMyFiles.html' %}
+{% block content %}
+    <div class="add_files_container">
+        <div class="add_files_block">
+            <div class="add_files">
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="back_my_image"><a href="{% url "myImage"%}">❮</a> </div>
+                    <div class="field_text"><p>Имя файла</p></div>
+                    <input pattern=".{1,20}" type="text" name="title" class="name_file_field" placeholder="От 1 до 20 символов">
+                    <input type="hidden" name="username" value="{{ user.username }}" readonly class="login_field_text">
+                    <div class="field_text"><p>Файл</p></div>
+                    <div class="file_file_field"></div>
+                    <input type="file" name="image" accept="image/*" multiple style="opacity:0;" class="file_submit">
+                    <button type="submit" class="button_submit">Загрузить</button>
+                    </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

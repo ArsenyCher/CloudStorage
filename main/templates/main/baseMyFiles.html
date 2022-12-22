@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;1,100&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FoxFile</title>
+    <link rel="stylesheet" href={% static "myFiles.css"%}>
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="head_block">
+                <div class="logo_text"><a href={% url "login"%}>FoxFile</a></div>
+                <div class="user_area_block">
+                    <div class="user_area">
+                        <div class="user_name">{{ user.username }}<br><a href="{% url "logout" %}">Выйти</a></div>
+                        <div class="user_circle"><img src={% static 'standartIcon.svg '%}></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>

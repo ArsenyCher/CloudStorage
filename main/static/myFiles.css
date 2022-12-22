@@ -1,0 +1,343 @@
+body{
+	font-family: 'Roboto', sans-serif;
+	background: #efefef;
+	user-select: none;
+	margin: 0; /* Убираем отступы */
+}
+header{
+	position: fixed;
+	z-index: 2;
+	width: 100%;
+	height: 60px;
+	left: 0px;
+	top: 0px;
+	background: #FFFFFF;
+}
+.container{
+	max-width: 82vw;
+	height: 100%;
+	margin: 0 auto;
+}
+.head_block{
+	display: flex;
+	height: 100%;
+
+  	align-items: center;
+}
+.logo_text{
+	position: relative;
+
+	font-weight: 700;
+	font-size: 32px;
+	line-height: 107.52%;
+
+	/* or 34px */
+	text-align: left;
+
+	color: #FFBF5F;
+}
+.logo_text a{
+	text-decoration: none;
+	 outline: none;
+	color: #FFBF5F;
+}
+.user_area_block{
+
+	align-items: center;
+	margin-left: auto;
+}
+.user_area{
+	display: flex;
+	height: 100%;
+
+  	align-items: center;
+}
+.user_name{
+	position: relative;
+	padding:0px 5px 0px 0px;
+}
+.user_circle {
+    width: 40px;
+    height: 40px;
+    -webkit-border-radius: 45px;
+    -moz-border-radius: 45px;
+    border: 3px solid;
+    border-color: #FFBF5F;
+    background: #DDDFE0;
+}
+.user_circle img {
+	align-items: center;
+	margin-left: auto;
+    width: 40px;
+    height: 40px;
+    -webkit-border-radius: 45px;
+    -moz-border-radius: 45px;
+}
+.site_content_block{
+	position: relative;
+	top: 100px;
+}
+.list_menu{
+	box-sizing: border-box;
+
+	position: relative;
+	width: 100%;
+	height: 60px;
+
+	background: #FFFFFF;
+	border-bottom: 1px solid #CCCCCC;
+}
+.list_menu_block{
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	height: 100%;
+	justify-content: center;
+
+}
+.menu {
+	display: flex;
+	align-items: center;
+	flex-direction: row-reverse;
+	justify-content: space-between;
+	text-align: right;
+	width: 170px;
+	font-size: 14px;
+}
+.menu a {
+	position: relative;
+
+	color:black;
+	border: 1px solid #CCCCCC;
+	padding:5px 10px 5px 10px;
+	text-decoration: none;
+	border-radius: 5px;
+    }
+.menu a:hover {
+	position: relative;
+
+	background: #e0e0e0;
+	border: 1px solid #CCCCCC;
+	padding:5px 10px 5px 10px;
+	border-radius: 5px;
+    }
+.active{
+	position: relative;
+
+	background: #e0e0e0;
+	border: 1px solid #CCCCCC;
+	padding:5px 10px 5px 10px;
+	border-radius: 5px;
+}
+.container_menu{
+	max-width: 97%;
+	height: 100%;
+	margin: 0 auto;
+}
+.info_menu_block{
+	box-sizing: border-box;
+
+	position: relative;
+	width: 100%;
+	height: 60px;
+
+	background: #FFFFFF;
+	border-width: 0px 0px 1px 0px;
+	border-style: solid;
+	border-color: #CCCCCC;
+}
+.content_menu_block{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 100%;
+}
+.content_menu_block img{
+	width: 40px;
+    height: 40px;
+}
+.menu_block_text_container{
+	position: relative;
+	width: 70%;
+}
+.info_menu_block_text{
+	display: flex;
+	margin:auto 2%;
+	font-size: min(max(10px, 4vw), 14px);
+	justify-content: space-between;
+	padding:0px 5px 0px 5px;
+
+}
+.image_indentation{
+	width: 40px;
+    height: 40px;
+}
+.container_button{
+	display: flex;
+	width: 184px;
+	height: 40px;
+}
+.action_files_button{
+	box-sizing: border-box;
+	position: relative;
+	width: 50px;
+	height: 40px;
+	text-decoration: none;
+	background: #FFBF5F;
+	border: 1px solid #FFBF5F;
+	border-radius: 5px;
+
+	margin: 0px 5px 0px 0px;
+	color:white;
+	font-size: 28px;
+	text-align: center;
+}
+.add_files_button{
+	box-sizing: border-box;
+	position: relative;
+	width: 184px;
+	height: 40px;
+	text-decoration: none;
+	background: #FFBF5F;
+	border: 1px solid #FFBF5F;
+	border-radius: 5px;
+
+	color:white;
+	font-size: 28px;
+	text-align: center;
+}
+.add_files_button:active{
+	box-sizing: border-box;
+	background: #e09628;
+	border: 1px solid #e09628;
+	border-radius: 5px;
+}
+.files_menu_block{
+	box-sizing: border-box;
+
+	position: relative;
+	width: 100%;
+	height: 60px;
+	top: 10px;
+
+	background: #FFFFFF;
+	border-width: 1px 0px;
+	border-style: solid;
+	border-color: #CCCCCC;
+}
+.wrapper {
+	width: 40px;
+    height: 40px;
+}
+.exmpl {
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 40px;
+    height: 40px;
+}
+.exmpl img {
+	height: 100%;
+	width: auto;
+}
+.add_files{
+	display: flex;
+	max-width: 82vw;
+align-content: center;
+	justify-content: center;
+  	align-items: center;
+	padding: 20px 20px 20px 20px;
+}
+.add_files_container{
+	position: relative;
+	display: flex;
+	align-content: center;
+	justify-content: center;
+}
+.add_files_block{
+	position: relative;
+	width: 100%;
+	max-width: 500px;
+	left: 0px;
+	top: 5em;
+	height: 450px;
+	background: #FFFFFF;
+	box-shadow: 6px 4px 16px 1px rgba(0, 0, 0, 0.15);
+	border-radius: 10px;
+}
+.name_file_field{
+	box-sizing: border-box;
+
+	position: relative;
+	width: 100%;
+	height: 40px;
+
+	background: #FFFFFF;
+	border: 1px solid #FFBF5F;
+	border-radius: 5px;
+}
+.file_submit{
+	position: relative;
+	width: 100%;
+	height: 90px;
+	bottom: 90px;
+}
+
+.file_file_field{
+	box-sizing: border-box;
+
+	position: relative;
+	width: 100%;
+	height: 90px;
+	background: #FFFFFF;
+	border: 2px dashed #FFBF5F;
+	border-radius: 5px;
+}
+.button_submit{
+	box-sizing: border-box;
+
+	position: relative;
+	width: 100%;
+	height: 40px;
+
+	background: #FFBF5F;
+	border: 1px solid #FFBF5F;
+	border-radius: 5px;
+}
+.button_submit:active{
+	box-sizing: border-box;
+	background: #e09628;
+	border: 1px solid #e09628;
+	border-radius: 5px;
+}
+.field_text p{
+	font-style: normal;
+	font-weight: 400;
+	font-size:calc(11px + 0.1vw);
+	line-height:  1.3em;
+	color: #000000;
+}
+.back_my_image{
+	position: relative;
+	right: 3vw;
+	font-size:calc(16px + 0.5vw);
+	text-decoration: none;
+	color: #111;
+}
+.back_my_image a{
+	font-size:calc(16px + 0.5vw);
+	text-decoration: none;
+	color: #111;
+}
+@media(min-width: 200px) and (max-width: 500px) {
+	.container_button {
+		width: 130px;
+		height: 40px;
+	}
+
+	.action_files_button {
+		width: 30px;
+		height: 40px;
+	}
+}

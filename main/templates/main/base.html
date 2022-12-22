@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;1,100&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FoxFile</title>
+    <link rel="stylesheet" href={% static 'base.css'%}>
+</head>
+<body>
+    <header>
+		<div class="container">
+			<div class="head_block">
+                <div class="logo_text">FoxFile</div>
+				<div class="menu">
+                    <a href="#contact_anchor">Контакты</a>
+                    <a href="#ab_me_anchor">О сайте</a>
+                    <a href="#reg_anchor">Главная</a>
+                </div>
+			</div>
+		</div>
+	</header>
+    <div id="reg_anchor" class="req_content_container">
+		<div class="container">
+			<div class="home_page_block">
+				<div class="text_welcome"><h1>FoxFile - менеджер для ваших файлов</h1><p>Храните документы и фото, а также работайте над ними на компьютере или мобильном устройстве.</p></div>
+				{% block content %}
+                {% endblock %}
+			</div>
+		</div>
+    </div>
+    <div id="ab_me_anchor" class="ab_me_content_container">
+        <div class="container">
+            <div class="home_about_me_block">
+                <div class="about_me_text"><h1>О сайте</h1></div>
+                <div class="about_me_text_description"><p>FoxFile - это файловый менеджер с открытым <a href="https://github.com/ArsenyCher/ArsenyCher.github.io" target="_blank">исходным кодом</a>, который позволяет осуществлять загрузку, просмотр и установку файлов. Файловый менеджер позволяет вам быстро и легко находить, а также управлять файлами в вашем рабочем пространстве с любого устройства, подключенного к интернету.</p></div>
+            </div>
+        </div>
+    </div>
+    <div id="contact_anchor" class="contact_content_container">
+        <div class="container">
+            <div class="home_contact_block">
+                <div class="contact_text"><h1>Контакты</h1></div>
+                <div class="contact_container">
+                    <div class="VK_phone_email_block">
+                        <a href="https://vk.com/foxfilee" target="_blank">
+                            <div class="VK_phone_email_container">
+                                <div class="VK_phone_email_circle"><img src="{% static 'VKicon.svg' %}"></div>
+                                <div class="VK_text"><p>VK</p><p>FoxFile</p></div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="VK_phone_email_block">
+                        <div class="VK_phone_email_container">
+                            <div class="VK_phone_email_circle"><img src="{% static 'phoneicon.svg' %}"></div>
+                            <div class="VK_text"><p>Телефон</p><p>8(951)-837-18-94</p><p>Чернышев Арсений</p></div>
+                        </div>
+                    </div>
+                    <div class="VK_phone_email_block">
+                        <a href="mailto:arsentiyc@inbox.ru" target="_blank">
+                            <div class="VK_phone_email_container">
+                                <div class="VK_phone_email_circle"><img src="{% static 'emailicon.svg' %}"></div>
+                                <div class="email_text"><p>Email</p><p>arsentiyc@inbox.ru</p></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="footer_container">
+                <div class="footer_logo_text">FoxFile</div>
+                <div class="all_rights_reserved"><p>© 2022 FoxCloud</p></div>
+                <div class="footer_menu">
+                    <a href="#reg_anchor">Главная</a>
+				    <a href="#ab_me_anchor">О сайте</a>
+				    <a href="#contact_anchor">Контакты</a>
+                </div>
+                <!--<div class="footer_circle">
+                    <div class="footer_circle_container">
+                        <div class="footer_VK_circle"></div>
+                        <div class="footer_email_circle"></div>
+                    </div>
+                </div>-->
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
